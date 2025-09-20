@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #f2f4f7;
+}
+.container{
+     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.box1 img{
+   height: 100px;
+   width: 300px;
+}
+.box1 p{
+    width: 450px;
+    font-size: 24px;
+    margin-left: 27px;
+    margin-bottom: 8rem;
+}
+.loginform{
+    background-color: #fff;
+    border-radius: 8px;
+}
+.loginform form{
+    height: 320px;
+    width: 400px;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    display: flex;
+    /* justify-content: center; */
+    text-align: center;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+form input{
+    border-radius: 6px;
+    padding: 0.8rem 0.8rem;
+    width: 90%;
+    /* margin-bottom: 0.7rem; */
+    border: 1px solid #dddfe2;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size: 16px;
+}
+input:focus{
+    border: 1px solid #0866ff;
+    outline: none;
+}
+form .button{
+        padding: 0.7rem 2.5rem;
+background-color: #0866ff;
+color: white;
+border: none;
+    width: 90%;
+font-weight: 600;
+font-size: 21px;
+margin: 0.8rem auto;
+border-radius: 6px;
+
+}
+.button:hover{
+    background-color: #1a6ef5;
+}
+a{
+    text-decoration: none;
+    color: #0866ff;
+    margin: 0 10px;
+        /* margin-bottom: 1.2rem; */
+/* border-bottom: 1px solid #eee; */
+width: 100%;
+text-align: center;
+padding-bottom: 2px;
+font-size: 14px;
+}
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+hr{
+   margin: 20px;
+   border: 1px solid rgb(237, 231, 231);
+}
+.register{
+    width: 50%;
+    /* text-align: center; */
+    margin: 0 auto;
+    padding:  0.7rem;
+    font-size: 17px;
+    color: white;
+    border: none;
+    border-radius:6px;
+   background-color: #42b72a;
+   font-weight: bold;
+}
+.register:hover{
+    background-color: #41b02a;
+}
+@media(max-width:769px){
+    .container{
+        flex-direction: column;
+        gap: 0rem;
+    }
+    .box1{
+        height: 150px;
+    }
+    .box1 img{
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: -8rem
+        ;
+    }
+    .box1 p{
+        display: none;
+    }
+    .text-input{
+        margin-top: 20px;
+    }
+
+}
+@media (max-width:376px){
+    .loginform{
+        width: 100%;
+        background-color: #f2f4f7;
+        margin-left: 9px;
+    }
+   .box1 img{
+     margin-left: 3.1rem;   
+    }
+}
