@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
+ 
 body{
     background-color: #f2f4f7;
 }
@@ -100,8 +105,16 @@ hr{
    background-color: #42b72a;
    font-weight: bold;
 }
+.register-a{
+    color: white;
+     font-size: 16px;
+}
 .register:hover{
     background-color: #41b02a;
+}
+.register-a:hover{
+    text-decoration: none;
+    border-bottom: none;
 }
 @media(max-width:769px){
     .container{
@@ -122,14 +135,16 @@ hr{
     }
     .text-input{
         margin-top: 20px;
+        /* width: 90%; */
     }
 
 }
 @media (max-width:376px){
     .loginform{
-        width: 100%;
+        width: 99%;
         background-color: #f2f4f7;
-        margin-left: 9px;
+       margin-left: 9px;
+         
     }
    .box1 img{
      margin-left: 3.1rem;   
