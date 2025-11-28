@@ -16,7 +16,7 @@
             <div class="loginform">
             <form action="">
                 <input type="text" placeholder="Email address or phone number" class="text-input">
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" class="pass">
                 <button class="button">Log in</button>
                 <a href="">Forgotten password?</a>
                 <hr>
@@ -27,5 +27,15 @@
         </div>
         
     </div>
+    <script>
+        let email=document.querySelector(".text-input");
+        let pass=document.querySelector(".pass");
+        let form=document.querySelector("form");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            console.log("User email ==> ",email.value);
+            console.log("User pass ==> ",pass.value);
+        })
+    </script>
 </body>
 </html>
