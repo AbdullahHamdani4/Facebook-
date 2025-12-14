@@ -15,8 +15,9 @@
             </div>
             <div class="loginform">
             <form action="">
-                <input type="text" placeholder="Email address or phone number" class="text-input">
-                <input type="password" placeholder="Password" class="pass">
+                <input type="text" class="emailinput" placeholder="Email address or phone number" class="text-input">
+                <p class="error hide">Email should contain @</p>
+                <input type="password" placeholder="Password" class="pass passinput">
                 <button class="button">Log in</button>
                 <a href="">Forgotten password?</a>
                 <hr>
@@ -27,7 +28,7 @@
         </div>
         
     </div>
-    <script>
+    <!-- <script>
         let email=document.querySelector(".text-input");
         let pass=document.querySelector(".pass");
         let form=document.querySelector("form");
@@ -36,6 +37,9 @@
             console.log("User email ==> ",email.value);
             console.log("User pass ==> ",pass.value);
         })
-    </script>
+    </script> -->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
