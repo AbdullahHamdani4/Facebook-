@@ -177,10 +177,7 @@ span:hover{
     border-radius: 12px;
     
 }
-.post{
-    /* height: 800px; */
-   
-}
+
 .post-top{
     display: flex ;
     font-size: 15px;
@@ -231,9 +228,7 @@ span:hover{
 .hide-2{
     display: none;
 }
-.hide-3{
-    display: none;
-}
+
 #toggle-para-1{
     margin: 5px 0 !important;
 }

@@ -126,7 +126,9 @@ hr{
     color: red;
     font-weight: 600;
 }
-
+.hide{
+    display: none;
+}
 @media(max-width:769px){
     .container{
         flex-direction: column;

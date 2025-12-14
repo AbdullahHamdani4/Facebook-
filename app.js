@@ -2,21 +2,6 @@ let form = document.querySelector("form")
 let emailInput = document.querySelector(".emailinput")
 let passInput = document.querySelector(".passinput")
 let errorMsg = document.querySelector(".error")
-let togglePara = document.getElementById("toggle-para-1").previousElementSibling
-function hello(btn){
-    // console.log(btn.innerHtml);
-    console.log(btn.previousElementSibling);
-    btn.previousElementSibling.classList.toggle("hide-2")
-    // console.log(123);
-    // console.log(btn.innerHTML);
-    
-    if (btn.innerHTML == '<i class="fa-solid fa-angle-down"></i>') {
-        btn.innerHTML ='<i class="fa-solid fa-angle-up"></i>'
-        console.log(12);
-    }
-     
-    else btn.innerHTML = '<i class="fa-solid fa-angle-down"></i>'
-}
 
 form.addEventListener("submit", (e) => {
     let email = true;
@@ -88,4 +73,12 @@ form.addEventListener("submit", (e) => {
         }
     }
 })
+function hello(btn){
+     console.log(btn.previousElementSibling);
+    btn.previousElementSibling.classList.toggle("hide-2")
+    if (btn.innerHTML == '<i class="fa-solid fa-angle-down"></i>') {
+        btn.innerHTML ='<i class="fa-solid fa-angle-up"></i>'
+     }
+    else btn.innerHTML = '<i class="fa-solid fa-angle-down"></i>'
+}
 
