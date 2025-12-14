@@ -2,7 +2,22 @@ let form = document.querySelector("form")
 let emailInput = document.querySelector(".emailinput")
 let passInput = document.querySelector(".passinput")
 let errorMsg = document.querySelector(".error")
-let togglePara=document.getElementById("toggle-para")
+let togglePara = document.getElementById("toggle-para-1").previousElementSibling
+function hello(btn){
+    // console.log(btn.innerHtml);
+    console.log(btn.previousElementSibling);
+    btn.previousElementSibling.classList.toggle("hide-2")
+    // console.log(123);
+    // console.log(btn.innerHTML);
+    
+    if (btn.innerHTML == '<i class="fa-solid fa-angle-down"></i>') {
+        btn.innerHTML ='<i class="fa-solid fa-angle-up"></i>'
+        console.log(12);
+    }
+     
+    else btn.innerHTML = '<i class="fa-solid fa-angle-down"></i>'
+}
+
 form.addEventListener("submit", (e) => {
     let email = true;
     errorMsg.style.display = "none"
@@ -15,7 +30,7 @@ form.addEventListener("submit", (e) => {
             text: "Email is empty",
             icon: "question"
         })
-        email=false
+        email = false
     }
     //else is checking whether it contains @ and .
     else {
@@ -40,7 +55,7 @@ form.addEventListener("submit", (e) => {
             errorMsg.style.display = "block"
             email = false;
         }
-     }
+    }
     //Password checking 
     if (email) {
         //Checking whether its empty or not
@@ -65,11 +80,12 @@ form.addEventListener("submit", (e) => {
                 title: "Login Successfully",
                 text: "Redirecting you to Dasboard",
                 icon: "success"
-            }).then((result)=>{
-              if(result.isConfirmed){
-                window.location.href="http://127.0.0.1:5500/dashboard.html"
-              }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "http://127.0.0.1:5500/dashboard.html"
+                }
             })
         }
     }
 })
+

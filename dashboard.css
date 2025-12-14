@@ -228,6 +228,22 @@ span:hover{
     height: 100%;
     /* background-color: brown; */
 }
+.hide-2{
+    display: none;
+}
+.hide-3{
+    display: none;
+}
+#toggle-para-1{
+    margin: 5px 0 !important;
+}
+#toggle-btn{
+    padding: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+ }
 @media(max-width:1200px){
     .head-center{
         display: none;
