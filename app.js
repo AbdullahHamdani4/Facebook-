@@ -2,83 +2,57 @@ let form = document.querySelector("form")
 let emailInput = document.querySelector(".emailinput")
 let passInput = document.querySelector(".passinput")
 let errorMsg = document.querySelector(".error")
-
+let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+let usersDatabaseLocal = "";
+localStorage.removeItem("Current User")
+const sweety = (title, text, icon) => {
+    return Swal.fire({
+        title: title,
+        text: text,
+        icon: icon
+    })
+}
 form.addEventListener("submit", (e) => {
-    let email = true;
+    usersDatabaseLocal = JSON.parse(localStorage.getItem("userData"));
     errorMsg.style.display = "none"
     e.preventDefault()
+    const email = emailInput.value.trim();
+    const password = passInput.value.trim();
+
     //Email checking 
-    //if is checking whether its empty or nor
-    if (emailInput.value.trim() == "") {
-        Swal.fire({
-            title: "Enter Email",
-            text: "Email is empty",
-            icon: "question"
-        })
-        email = false
+    //Email empty or not
+    if (email == "") {
+        sweety("Enter Email", "Email is empty", "question")
+        return
     }
-    //else is checking whether it contains @ and .
-    else {
-        let flag1 = true;
-        let flag2 = true;
-        for (let i = 0; i < emailInput.value.length; i++) {
-            if (emailInput.value[i] == "@") {
-                flag1 = false
-            }
-            if (emailInput.value[i] == ".") {
-                flag2 = false
-            }
-        }
-        //Checking @
-        if (flag1) {
-            errorMsg.style.display = "block"
-            email = false;
-        }
-        //Checking .
-        else if (flag2) {
-            errorMsg.innerText = "Email should contain ."
-            errorMsg.style.display = "block"
-            email = false;
-        }
+    //Whether the email format is correct or not
+    if (emailRegex.test(email) == false) {
+        errorMsg.style.display = "block"
+        return
     }
+
     //Password checking 
-    if (email) {
-        //Checking whether its empty or not
-        if (passInput.value.trim() == "") {
-            Swal.fire({
-                title: "Enter Password",
-                text: "Password is empty",
-                icon: "question"
-            })
-        }
-        //Checking the length whether its 7 or greater
-        else if (passInput.value.trim().length < 7) {
-            Swal.fire({
-                title: "Password is Short",
-                text: "Password should contain atleast 7 characters",
-                icon: "warning"
-            })
-        }
-        //All conditions met so redirect it
-        else {
-            Swal.fire({
-                title: "Login Successfully",
-                text: "Redirecting you to Dasboard",
-                icon: "success"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.location.href = "http://127.0.0.1:5500/dashboard.html"
-                }
-            })
-        }
+    //Checking whether its empty or not
+    if (password == "") {
+        return sweety("Enter Password", "Password is empty", "question")
+    }  
+    //Finding the user data in the database(localStorage)
+    if (!usersDatabaseLocal) return sweety("Invalid email or password", "Please check your credentials and try again.", "error")
+    const checkUserData = usersDatabaseLocal.find((each) => {
+        return each.email == email && each.password == password
+    })
+    if (checkUserData) {
+        makeCurrentUser(email)
+        sweety("Login Successfully", "Redirecting you to Dasboard", "success").then((result) => {
+            if (result.isConfirmed) {
+                window.location.replace("http://127.0.0.1:5500/Dasboard/dashboard.html")
+            }
+        })
+        emailInput.value = ""
+    } else {
+        sweety("Invalid email or password", "Please check your credentials and try again.", "error")
     }
-})
-function hello(btn){
-     console.log(btn.previousElementSibling);
-    btn.previousElementSibling.classList.toggle("hide-2")
-    if (btn.innerHTML == '<i class="fa-solid fa-angle-down"></i>') {
-        btn.innerHTML ='<i class="fa-solid fa-angle-up"></i>'
-     }
-    else btn.innerHTML = '<i class="fa-solid fa-angle-down"></i>'
-}
+
+})//form event end
+
 

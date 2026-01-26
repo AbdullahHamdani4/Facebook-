@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.container {
+    max-width: 400px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.container .heading {
+    margin-left: 11px;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    text-align: center;
+}
+
+.container .description {
+    width: 100%;
+    color: #787B80;
+    font-size: 15px;
+    /* margin-left: px; */
+    text-align: center;
+    /* margin-right: 100px; */
+}
+
+.container .input-pass {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+     gap: 10px;
+ }
+.container .input-pass p{
+    color: #dc2626;
+    font-size: 16px;
+    font-weight: 600;
+    margin: -5px 0;
+}
+.container .input-pass input {
+    width: 95%;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid grey;
+    padding-left: 8px;
+}
+
+.container .buttons {
+    width: 100%;
+    text-align: center !important;
+}
+
+.container .change-pass,.find-acc {
+    width: 95%;
+    height: 37px;
+    border-radius: 4px;
+    background-color: #3577E5;
+    border: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+ }
+.change-pass:hover,.find-acc:hover{
+    background-color: #3d6dc0;
+}
+
+.container .skip {
+    margin-top: 7px;
+    width: 95%;
+    height: 37px;
+    border-radius: 4px;
+    border: 1px solid #3577E5;
+    color: #3577E5;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.skip:hover{
+    background-color: rgb(226, 222, 222);
+}
+.hide{
+    display: none;
+}

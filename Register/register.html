@@ -16,13 +16,13 @@
         <div class="logo">
             <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="" height="100px" width="400px">
         </div>
-        <form class="form">
+        <form class="form" >
             <h2>Create a new account</h2>
             <p class="grey">It's quick and easy.</p>
             <hr>
             <div class="inputs">
-                <input type="text" placeholder="First name">
-                <input type="text" placeholder="Surname">
+                <input type="text" placeholder="First name" id="firstname" required>
+                <input type="text" placeholder="Surname" id="lastname" required>
             </div>
             <p class="text-start">Date of birth <i class="fa-solid fa-circle-question" style="color: #cccccc;"></i></p>
             <div class="dropdowns">
@@ -159,13 +159,13 @@
             </div>
             <p class="text-start">Gender<i class="fa-solid fa-circle-question" style="color: #cccccc;"></i></p>
             <div class="dropdowns flex">
-                <div class="gender-box"> <label for="">Male</label> <input type="radio" name="gender"></div>
-                <div class="gender-box"> <label for="">Female</label><input type="radio" name="gender"></div>
-                <div class="gender-box"> <label for="">Other</label><input type="radio" name="gender">
+                <div class="gender-box"> <label for="">Male</label> <input type="radio" name="gender" value="Male"></div>
+                <div class="gender-box"> <label for="">Female</label><input type="radio" name="gender" value="Female"></div>
+                <div class="gender-box"> <label for="">Other</label><input type="radio" name="gender" value="Other">
                 </div>
             </div>
-            <input type="text" class="input-full" placeholder="Mobile number or email address">
-            <input type="text" class="input-full" placeholder="New password">
+            <input type="text" class="input-full" placeholder="Mobile number or email address" required id="Email-bar">
+            <input type="text" class="input-full" placeholder="New password" required id="user-Pass">
             <p class="end-p">People who use our service may have uploaded your contact information to Facebook. <a
                     href="#">Learn
                     more.</a></p>
@@ -173,11 +173,12 @@
                     href="#">Cookies
                     Policy.</a> You may receive SMS notifications from us and can opt out at any time.
                 Sign Up</p>
-            <button class="register"><a href="dashboard.html" style="text-decoration: none; color: white;">Sign Up</a></button>
-            <a href="index.html">Already have an account?</a>
+            <button class="register" type="submit"> Sign Up </button>
+            <a href="../index.html">Already have an account?</a>
         </form>
     </div>
-    
+    <script src="register.js"></script>
+    <script src="../Authentication/app.js"></script>
 </body>
 
 </html>
