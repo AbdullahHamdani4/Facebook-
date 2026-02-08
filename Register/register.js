@@ -27,5 +27,5 @@ form1.addEventListener("submit", (event) => {
      usersDatabase.push(data)
      localStorage.setItem("userData", JSON.stringify(usersDatabase))
         makeCurrentUser(data.email)
-        window.location.replace("http://127.0.0.1:5500/Dasboard/dashboard.html");
+        window.location.replace("/Dasboard/dashboard.html");
 })

@@ -7,5 +7,5 @@ function hello(btn) {
     else btn.innerHTML = '<i class="fa-solid fa-angle-down"></i>'
 }
 if (!localStorage.getItem("Current User")) {
-    window.location.replace("http://127.0.0.1:5500/");
+    window.location.replace("/");
 }
