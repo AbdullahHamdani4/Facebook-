@@ -99,7 +99,7 @@ header>.nav-right>div {
     flex: 1;
     display: flex;
     width: 100%;
-}
+ }
 
 .main>.main-left {
     width: 300px;
@@ -120,7 +120,7 @@ header>.nav-right>div {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-width: 500px;
+     max-width: 500px;
     flex: 1;
     /* background-color: brown; */
     height: 100%;
@@ -184,10 +184,11 @@ header>.nav-right>div {
     display: flex;
     flex-direction: row;
     gap: 8px;
-    width: 100%;
-        overflow-x:scroll;
-      /* display: none; */
-}
+    min-width: 90% ;
+    width: 100% ;
+     overflow-x:scroll;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+ }
 .main > .main-center > .main-center-center >  .stories-section > :first-child{
     height: 200px;
     min-width: 110px;
@@ -280,9 +281,52 @@ font-size: 18px;  }
     color: white;
     
 }
+.main > .main-center > .main-center-center >  .posts-section{
+    margin-top: 8px;
+    background-color: grey;
+}
 
-
-
+.main > .main-center > .main-center-center >  .posts-section > .post {
+    /* max-height: 0px; */
+    width: 100%;
+    background-color: white;
+    border: 1px solid;
+    padding: 5px;
+}
+.main > .main-center > .main-center-center >  .posts-section > .post > .post-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .main > .main-center > .main-center-center >  .posts-section > .post > .post-top > .post-top-left{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+ }
+ .main > .main-center > .main-center-center >  .posts-section > .post > .post-top > .post-top-left > .profile-icon > img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+ }
+ .main > .main-center > .main-center-center >  .posts-section > .post > .post-top > .post-top-left > .profile-name :first-child{
+    font-weight: bold;
+    /* font-size    : 14px; */
+ }
+.main > .main-center > .main-center-center >  .posts-section > .post > .post-top > .post-top-left > .profile-name :nth-child(2){
+    color: rgb(119, 117, 117);
+    font-size: 13px;
+    margin-bottom: 5px;
+ }
+ .main > .main-center > .main-center-center >  .posts-section > .post > .post-top > .post-top-right > i{
+    color: #727578;
+ }
+.main > .main-center > .main-center-center >  .posts-section > .post > .post-content{
+    text-align: center;
+    max-height: 500px;
+    width: 100%;
+    background-color: grey;
+}
 
 
 
@@ -295,6 +339,7 @@ font-size: 18px;  }
 
 
 /* Media Queries */
+
 @media (max-width:1024px) {
     header>.nav-center {
         display: none;
